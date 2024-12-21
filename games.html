@@ -8,6 +8,160 @@
    
     <title>Pb Games</title>
 </head>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #acadc9;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #f39c12, #8e44ad);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a i {
+            margin-right: 8px;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); 
+            z-index: -1;
+        }
+
+        .container-inner {
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+            color: white;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .container-inner h1 {
+            font-size: 40px;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #f39c12, #8e44ad);
+            -webkit-background-clip: text; 
+            background-clip: text;
+            color: transparent; 
+        }
+
+        .apps-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .app-card {
+            background-color: #1a1a1d;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 200px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .app-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .app-card h2 {
+            font-size: 18px;
+            color: #fff;
+            margin: 10px 0;
+            text-transform: uppercase;
+        }
+
+        .app-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        @media (max-width: 768px) {
+            .container-inner h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
 
 
 </body>
